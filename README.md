@@ -9,16 +9,14 @@ POSIX `sh`, no dependencies.
 ## Install
 
 ```sh
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/VadimV1/bootstrap-auditd-bindplane/main/bootstrap-auditd-bindplane.sh)" \
-  bootstrap-auditd-bindplane.sh -s '<SECRET_KEY>' -k 'fleet=<FLEET_NAME>'
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/VadimV1/bootstrap-auditd-bindplane/main/bootstrap-auditd-bindplane.sh)" bootstrap-auditd-bindplane.sh -s '<SECRET_KEY>' -k 'fleet=<FLEET_NAME>'
 ```
 
 Keep the key out of shell history:
 
 ```sh
 export BP_SECRET_KEY='<SECRET_KEY>'
-sudo -E sh -c "$(curl -fsSL https://raw.githubusercontent.com/VadimV1/bootstrap-auditd-bindplane/main/bootstrap-auditd-bindplane.sh)" \
-  bootstrap-auditd-bindplane.sh -k 'fleet=<FLEET_NAME>'
+sudo -E sh -c "$(curl -fsSL https://raw.githubusercontent.com/VadimV1/bootstrap-auditd-bindplane/main/bootstrap-auditd-bindplane.sh)" bootstrap-auditd-bindplane.sh -k 'fleet=<FLEET_NAME>'
 ```
 
 > The repeated script name becomes `$0`. Drop it and your first flag is silently swallowed.
